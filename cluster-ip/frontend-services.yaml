@@ -1,0 +1,15 @@
+# frontend-services.yaml
+apiVersion: v1
+kind: Services
+metadata:
+  name: frontend-svc
+  labels:
+    app: guestbook
+    tier: frontend
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 80
+  selector:
+    app: guestbook
+    tier: frontend
